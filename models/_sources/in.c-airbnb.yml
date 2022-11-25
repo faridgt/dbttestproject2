@@ -1,0 +1,29 @@
+version: 2
+sources:
+    - name: in.c-airbnb
+      freshness:
+        warn_after:
+            count: 1
+            period: day
+      database: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_DATABASE") }}'
+      schema: in.c-airbnb
+      loaded_at_field: '"_timestamp"'
+      tables:
+        - name: raw-hosts
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: raw-listings
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: raw-reviews
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
