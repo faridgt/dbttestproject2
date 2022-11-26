@@ -1,0 +1,14 @@
+version: 2
+exposures:
+  - name: Executive Dashboard
+    type: dashboard
+
+    maturity: low
+    url: https://app.snowflake.com/us-east-1/keboolaharri/#/full-moon-dL09xA0qH
+    description: Executive Dashboard about Airbnb listings and hosts
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_full_moon_reviews')
+    owner:
+      name: Farid
+      email: farid@farid.com
