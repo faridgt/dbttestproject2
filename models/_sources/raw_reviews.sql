@@ -1,7 +1,8 @@
 {{ config(materialized='view') }}
 
 with raw_reviews as (
-select * from SAPI_9436."in.c-airbnb"."raw-reviews"
+select * from  
+ {{ source('in.c-airbnb', 'raw-reviews') }}
 )
 select 
 

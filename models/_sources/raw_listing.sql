@@ -1,7 +1,8 @@
 {{ config(materialized='view') }}
 
 with raw_listtings as (
-select * from  SAPI_9436."in.c-airbnb"."raw-listings"
+select * from  
+ {{ source('in.c-airbnb', 'raw-listings') }}
     )
     select 
     ID as listing_id
