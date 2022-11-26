@@ -6,7 +6,7 @@ dbttestproject2:
             account: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_ACCOUNT") }}'
             database: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_DATABASE") }}'
             password: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_PASSWORD") }}'
-            schema: 'WORKSPACE_925240422' 
+            schema: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_SCHEMA") }}'
             type: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_TYPE") }}'
             user: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_USER") }}'
             warehouse: '{{ env_var("DBT_KBC_KEBOOLADBTPROJECT2_WAREHOUSE") }}'
